@@ -1,5 +1,5 @@
 all:
-	stow --verbose --target=$$HOME --restow --ignore=steam */
+	stow --verbose --target=$$HOME --restow */
 
 delete:
-	stow --verbose --target=$$HOME --delete --ignore=steam */
+	stow --verbose --target=$$HOME --delete */
