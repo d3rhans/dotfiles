@@ -3,6 +3,7 @@
 function launch_session() {
     tmux new-session -ds $1 -c $2
     tmux send-keys -t $1:1.1 "quantum" Enter
+    tmux send-keys -t $1:1.1 "vim ." Enter
     tmux send-keys -t $1:1.1 C-L
     tmux rename-window -t $1:1 dev
 
@@ -27,7 +28,8 @@ function launch_session() {
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/Code/ -name .git -printf '%h\n' | fzf)
+    # selected=$(find ~/Code/ -name .git -printf '%h\n' | fzf)
+    selected=$(fd --type d -gH .git ~/Code | xargs dirname | fzf)
 fi
 
 if [[ -z $selected ]]; then

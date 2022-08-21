@@ -85,6 +85,11 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 
+### Lock screen
+super + @x
+    loginctl lock-session
+
+
 ### PICOM
 super + shift + p
     ~/.config/picom/start.sh
@@ -110,3 +115,7 @@ XF86AudioNext
 
 XF86AudioPrev
     playerctl previous
+
+### Screenshots
+super + {_,shift +, alt + }  @Print
+    {scrot, scrot -s, scrot -u} ~/Bilder/Screenshots/'screenshot-%Y-%m-%d_%H-%M-%S.png'

@@ -31,3 +31,6 @@ xsetroot -cursor_name left_ptr
 feh --bg-scale ~/Bilder/Wallpaper/tauben_terafox.jpg
 ~/.config/polybar/launch.sh
 ~/.config/picom/start.sh
+xss-lock xsecurelock &
+xset s on
+xset s 600
