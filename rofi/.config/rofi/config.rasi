@@ -2,7 +2,7 @@ configuration {
     modi                : "drun";
     font                : "FiraCode Nerd Font Mono 12";
     show-icons          : true;
-    // icon-theme          : "Reversal-dark";
+    icon-theme          : "Papirus-Dark";
     display-drun        : "";
     drun-display-format : "{name}";
     sidebar-mode        : false;

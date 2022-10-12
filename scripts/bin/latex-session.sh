@@ -14,7 +14,7 @@ function launch_session() {
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(fd --type d -gH .git ~/Dokumente/Projekte ~/Dokumente/PHD | xargs dirname | fzf)
+    selected=$(fd --type d -gH .git ~/Dokumente/Projekte ~/Dokumente/PHD ~/Dokumente/quantum | xargs dirname | fzf)
 fi
 
 if [[ -z $selected ]]; then

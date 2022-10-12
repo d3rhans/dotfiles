@@ -11,6 +11,10 @@ super + {_,shift + } Return
 super + @space
 	rofi -show drun
 
+# file search
+super + @f
+    rofi -show fb -modi fb:~/bin/file_search.sh
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -40,8 +44,8 @@ super + g
 #
 
 # set the window state
-super + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+super + {t,shift + t,s}
+	bspc node -t {tiled,pseudo_tiled,floating}
 
 # set the node flags
 super + ctrl + {m,x,y,z}

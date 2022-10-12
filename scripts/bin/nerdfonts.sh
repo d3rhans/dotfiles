@@ -1,16 +1,18 @@
 #!/bin/bash
 
-URL="https://github.com/ryanoasis/nerd-fonts/releases/download/2.2.0-RC/FiraCode.zip"
+FONTFILE="FiraCode.zip"
+# FONTFILE="Monoid.zip"
+URL="https://github.com/ryanoasis/nerd-fonts/releases/download/2.2.0-RC/${FONTFILE}"
 DIR=~/.local/share/fonts/nerdfonts/
 
-echo "Installing Fira Code nerdfont"
+echo "Installing nerdfont"
 
 mkdir -p ${DIR}
 rm $DIR/*.ttf
 
 wget $URL
-unzip FiraCode.zip "*.ttf" -d $DIR
+unzip $FONTFILE "*.ttf" -d $DIR
 fc-cache -f
-rm FiraCode.zip
+rm $FONTFILE
 
-echo "Fira Code nerdfont installed"
+echo "Nerdfont installed"
